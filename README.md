@@ -23,7 +23,7 @@ Plugin can be installed in following ways:
 #### Plugins install
 
 ```
-sfdx plugins:install @ngrx/changesetfetcher
+sfdx plugins:install @ngfrx/changesetfetcher
 ```
 
 #### cloning and plugins link
