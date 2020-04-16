@@ -35,14 +35,16 @@ interface AuthDetails {
 export default class ChangsetListCommand extends SfdxCommand {
 
   public static description = messages.getMessage('commandDescription');
+  private static readonly CHANGESETPATH = '/changemgmt/listOutboundChangeSet.apexp';
+  private static readonly ELEMENTID = 'ListOutboundChangeSetPage:listOutboundChangeSetPageBody:listOutboundChangeSetPageBody:ListOutboundChangeSetForm:ListOutboundChangeSetPageBlock:ListOutboundChangeSetBlockSection:OutboundChangeSetList:tb';
 
   public static examples = [
-  `$ sfdx ngfrx:changeset:list --username mysandboxusername@example.com
+  `sfdx ngfrx:changeset:list --username mysandboxusername@example.com
     NAME                                        STATUS
     ──────────────────────────────────────────  ──────
     JIRA-1234_HELLO_WORLD_SPRINT3               Open
   `,
-  `$ sfdx ngfrx:changeset:list --username mysandboxusername@example.com --verbose
+  `sfdx ngfrx:changeset:list --username mysandboxusername@example.com --verbose
   ID               NAME                                        DESCRIPTION  STATUS  MODIFIED BY     MODIFIED DATE
   ───────────────  ──────────────────────────────────────────  ───────────  ──────  ──────────────  ───────────────
   0A20E0000009BJA  JIRA-1234_HELLO_WORLD_SPRINT3                            Open    Olivia White    22-1-2020 17:02
@@ -71,9 +73,7 @@ export default class ChangsetListCommand extends SfdxCommand {
   };
 
   protected static requiresUsername = true;
-  private static readonly CHANGESETPATH = '/changemgmt/listOutboundChangeSet.apexp';
-  private static readonly ELEMENTID = 'ListOutboundChangeSetPage:listOutboundChangeSetPageBody:listOutboundChangeSetPageBody:ListOutboundChangeSetForm:ListOutboundChangeSetPageBlock:ListOutboundChangeSetBlockSection:OutboundChangeSetList:tb';
-
+  
   // tslint:disable-next-line: no-any
   public async run(): Promise<any> {
     // Start Spinner
@@ -81,7 +81,6 @@ export default class ChangsetListCommand extends SfdxCommand {
 
     // process Changeset Logic
     const result = await this.processListCommand();
-    // console.log(this.config.plugins);
 
     if (this.flags.verbose) {
       this.ux.table(result.records, ['id', 'name', 'description', 'status', 'modifiedBy', 'modifiedDate']);
