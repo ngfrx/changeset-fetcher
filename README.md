@@ -28,13 +28,13 @@ sfdx plugins:install @ngrx/changesetfetcher
 
 #### cloning and plugins link
 ```
-git clone https://github.com/ngfrx/changesetfetcher.git
+git clone https://github.com/ngfrx/changset-fetcher.git
 sfdx plugins:link changsetfetcher
 ```
 
 #### cloning and run command
 ```
-git clone https://github.com/ngfrx/changesetfetcher.git
+git clone https://github.com/ngfrx/changset-fetcher.git
 ./bin/run ngfrx:changeset:list -u <username> --verbose
 ```
 
