@@ -1,7 +1,7 @@
 {
   "name": "@ngfrx/changesetfetcher",
   "description": "Plugin to fetch changeset details from salesforce sandbox",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": "Ngfrx @ngfrx",
   "bugs": "https://github.com/ngfrx/changesetfetcher/issues",
   "dependencies": {
