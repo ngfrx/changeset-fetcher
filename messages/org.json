@@ -1,0 +1,4 @@
+{
+  "commandDescription": "Fetches list of changesets from salesforce sandbox",
+  "errorDOMParseException": "Exception while parsing the dom"
+}
