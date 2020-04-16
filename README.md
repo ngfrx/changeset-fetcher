@@ -1,4 +1,4 @@
-# Changset Fetcher
+# Changeset Fetcher
 
 A sfdx plugin to fetch changeset details from salesforce sandbox
 
