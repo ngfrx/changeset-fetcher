@@ -3,7 +3,7 @@
   "description": "Plugin to fetch changeset details from salesforce sandbox",
   "version": "0.8.2",
   "author": "Ngfrx @ngfrx",
-  "bugs": "https://github.com/ngfrx/changesetfetcher/issues",
+  "bugs": "https://github.com/ngfrx/changeset-fetcher/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -39,7 +39,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ngfrx/changesetfetcher",
+  "homepage": "https://github.com/ngfrx/changeset-fetcher",
   "keywords": [
     "sfdx-plugin","changeset","sfdx","salesforce","salesforce sandbox"
   ],
@@ -56,7 +56,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ngfrx/changesetfetcher",
+  "repository": "ngfrx/changeset-fetcher",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "tslint -p test -t stylish",
